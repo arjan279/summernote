@@ -52,7 +52,7 @@ export default class ImageDialog {
 
   bindEnterKey($input, $btn) {
     $input.on('keypress', (event) => {
-      if (event.keyCode === key.code.ENTER) {
+      if (event.keyCode === key.code.ENTER && $btn.is(":enabled")) {
         event.preventDefault();
         $btn.trigger('click');
       }
