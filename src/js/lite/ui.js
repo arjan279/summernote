@@ -543,7 +543,7 @@ const ui = function(editorOptions) {
 
     toggleBtn: function($btn, isEnable) {
       $btn.toggleClass('disabled', !isEnable);
-      $btn.attr('disabled', !isEnable);
+      $btn.prop('disabled', !isEnable);
     },
 
     toggleBtnActive: function($btn, isActive) {
