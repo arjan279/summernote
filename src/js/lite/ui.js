@@ -562,7 +562,7 @@ const ui = function(editorOptions) {
     onDialogShown: function($dialog, handler) {
       $dialog.one('note.modal.show', handler);
     },
-    
+
     onBeforeDialogHidden: function($dialog, handler) {
       $dialog.one('note.modal.beforehide', handler);
     },

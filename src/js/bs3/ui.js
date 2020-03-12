@@ -192,7 +192,7 @@ const ui = function(editorOptions) {
     onDialogShown: function($dialog, handler) {
       $dialog.one('shown.bs.modal', handler);
     },
-    
+
     onBeforeDialogHidden: function($dialog, handler) {
       $dialog.one('hide.bs.modal', handler);
     },
