@@ -7,6 +7,7 @@ class ModalUI {
   }
 
   show() {
+    this.$modal.trigger('note.modal.beforeshow');
     this.$backdrop.appendTo(document.body).show();
     this.$modal.addClass('open').show();
     this.$modal.trigger('note.modal.show');
@@ -20,6 +21,7 @@ class ModalUI {
   }
 
   hide() {
+    this.$modal.trigger('note.modal.beforehide');
     this.$modal.removeClass('open').hide();
     this.$backdrop.hide();
     this.$modal.trigger('note.modal.hide');

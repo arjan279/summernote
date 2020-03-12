@@ -12,7 +12,7 @@ export default class LinkPopover {
       'summernote.keyup summernote.mouseup summernote.change summernote.scroll': () => {
         this.update();
       },
-      'summernote.disable summernote.dialog.shown summernote.blur': () => {
+      'summernote.disable summernote.dialog.beforeshown summernote.dialog.shown summernote.blur': () => {
         this.hide();
       },
     };

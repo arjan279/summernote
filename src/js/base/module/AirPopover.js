@@ -36,7 +36,7 @@ export default class AirPopover {
         }
         this.onContextmenu = false;
       },
-      'summernote.disable summernote.change summernote.dialog.shown summernote.blur': () => {
+      'summernote.disable summernote.change summernote.dialog.beforeshown summernote.dialog.shown summernote.blur': () => {
         this.hide();
       },
       'summernote.focusout': () => {

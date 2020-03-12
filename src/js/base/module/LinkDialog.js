@@ -90,6 +90,10 @@ export default class LinkDialog {
       const $useProtocol = this.$dialog
         .find('.sn-checkbox-use-protocol input[type=checkbox]');
 
+      this.ui.onBeforeDialogShown(this.$dialog, () => {
+        this.context.triggerEvent('dialog.beforeshown');
+      });
+
       this.ui.onDialogShown(this.$dialog, () => {
         this.context.triggerEvent('dialog.shown');
 

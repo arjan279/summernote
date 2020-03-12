@@ -185,8 +185,16 @@ const ui = function(editorOptions) {
       $btn.toggleClass('active', isActive);
     },
 
+    onBeforeDialogShown: function($dialog, handler) {
+      $dialog.one('show.bs.modal', handler);
+    },
+
     onDialogShown: function($dialog, handler) {
       $dialog.one('shown.bs.modal', handler);
+    },
+    
+    onBeforeDialogHidden: function($dialog, handler) {
+      $dialog.one('hide.bs.modal', handler);
     },
 
     onDialogHidden: function($dialog, handler) {

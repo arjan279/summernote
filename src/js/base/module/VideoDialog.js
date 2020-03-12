@@ -189,6 +189,10 @@ export default class VideoDialog {
       const $videoUrl = this.$dialog.find('.note-video-url');
       const $videoBtn = this.$dialog.find('.note-video-btn');
 
+      this.ui.onBeforeDialogShown(this.$dialog, () => {
+        this.context.triggerEvent('dialog.beforeshown');
+      });
+
       this.ui.onDialogShown(this.$dialog, () => {
         this.context.triggerEvent('dialog.shown');
 

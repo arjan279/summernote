@@ -93,6 +93,10 @@ export default class ImageDialog {
       const $imageUrl = this.$dialog.find('.note-image-url');
       const $imageBtn = this.$dialog.find('.note-image-btn');
 
+      this.ui.onBeforeDialogShown(this.$dialog, () => {
+        this.context.triggerEvent('dialog.beforeshown');
+      });
+
       this.ui.onDialogShown(this.$dialog, () => {
         this.context.triggerEvent('dialog.shown');
 

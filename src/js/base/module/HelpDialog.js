@@ -61,6 +61,9 @@ export default class HelpDialog {
    */
   showHelpDialog() {
     return $.Deferred((deferred) => {
+      this.ui.onBeforeDialogShown(this.$dialog, () => {
+        this.context.triggerEvent('dialog.beforeshown');
+      });
       this.ui.onDialogShown(this.$dialog, () => {
         this.context.triggerEvent('dialog.shown');
         deferred.resolve();

@@ -555,8 +555,16 @@ const ui = function(editorOptions) {
       $dom.find('[data-value="' + value + '"]').addClass('checked');
     },
 
+    onBeforeDialogShown: function($dialog, handler) {
+      $dialog.one('note.modal.beforeshow', handler);
+    },
+
     onDialogShown: function($dialog, handler) {
       $dialog.one('note.modal.show', handler);
+    },
+    
+    onBeforeDialogHidden: function($dialog, handler) {
+      $dialog.one('note.modal.beforehide', handler);
     },
 
     onDialogHidden: function($dialog, handler) {
